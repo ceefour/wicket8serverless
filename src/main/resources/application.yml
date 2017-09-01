@@ -1,0 +1,24 @@
+---
+spring:
+  main:
+    banner-mode: "off"
+
+---
+spring:
+  profiles: development
+
+logging:
+  level:
+    com.amazonaws.serverless: DEBUG
+    org.apache.wicket: DEBUG
+    org.springframework.web: DEBUG
+
+wicket:
+  configuration: DEVELOPMENT
+
+---
+spring:
+  profiles: production
+
+wicket:
+  configuration: DEPLOYMENT
